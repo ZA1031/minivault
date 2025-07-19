@@ -1,0 +1,25 @@
+[project]
+name = "minivault"
+version = "0.1.0"
+description = "A local FastAPI + CLI tool for querying LLMs"
+authors = [
+    { name = "Minh Long, Do", email = "skydev1031@gmail.com" }
+]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "requests",
+    "psutil",
+    "uptime",
+    "ollama",
+    "torch"
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.scripts]
+minivault = "minivault.cli:main"
+
+[tool.setuptools]
+packages = ["minivault"]
